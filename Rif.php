@@ -66,7 +66,7 @@ class Rif {
      * @throws Exception
      */
     public function getInfo() {
-        if ($this->_validar()) {
+        if ($this->validar()) {
             if(function_exists('curl_init')) {
                 $this->_url .= $this->_rif;
 
@@ -125,7 +125,7 @@ class Rif {
      * 
      * @return boolean 
      */
-    private function _validar() {
+    public function validar() {
         $retorno = preg_match("/^([VEJPG]{1})([0-9]{9}$)/", $this->_rif);
         
         if ($retorno) {
