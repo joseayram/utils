@@ -4,6 +4,7 @@
 
 Clase que valida el rif indicado contra la información arrojada por el portal del seniat.
 
+ ``` php
 <?php
 require_once 'Rif.php';
 
@@ -20,3 +21,4 @@ switch ($datosFiscales->code_result) {
 		break;
 }
 ?>
+ ```
