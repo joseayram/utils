@@ -11,7 +11,7 @@ Clase que valida el rif indicado contra la información arrojada por el portal d
 <?php
 require_once 'Rif.php';
 
-$rif = new Rif('V153895500');
+$rif = new Rif('G200003030');
 $datosFiscales = json_decode($rif->getInfo());
 
 switch ($datosFiscales->code_result) {
