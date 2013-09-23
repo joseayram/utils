@@ -13,6 +13,6 @@ var_dump($datosFiscales);
 // Validar sin conectar al portal del seniat
 if ( $rif->validar() ) {
     echo 'EL RIF EXISTE';
-}elseif (!$rif->validar) {
+}elseif ( !$rif->validar() ) {
     echo 'EL RIF NO EXISTE';
 }
