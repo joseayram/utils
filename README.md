@@ -16,11 +16,16 @@ $datosFiscales = json_decode($rif->getInfo());
 
 switch ($datosFiscales->code_result) {
   case 1:
-		$texto  = "Razón social: {$datosFiscales->seniat->nombre}\n"
-				. "Agente Retención: {$datosFiscales->seniat->agenteretencioniva}\n"
-				. "Contribuyente IVA: {$datosFiscales->seniat->contribuyenteiva}\n"
-				. "Tasa: {$datosFiscales->seniat->tasa}\n";
-		echo $texto;
-		break;
+    $texto  = "Razón social: {$datosFiscales->seniat->nombre}<br />"
+            . "Agente Retención: {$datosFiscales->seniat->agenteretencioniva}<br />"
+            . "Contribuyente IVA: {$datosFiscales->seniat->contribuyenteiva}<br />"
+            . "Tasa: {$datosFiscales->seniat->tasa}<br />";
+    break;
+
+  default:
+    $texto = $datosFiscales->message;
+  break;
 }
+
+echo utf8_decode($texto);
  ```
