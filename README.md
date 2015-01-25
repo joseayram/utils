@@ -1,11 +1,17 @@
-﻿# Rutinas de utilidades generales
-﻿====
+# Rutinas de utilidades generales
 
-## 1. Rif.php
+## Requerimientos
+
+- PHP 5.0 o superior
+- [Librería CURL](http://php.net/manual/es/intro.curl.php)
+
+## Archivos
+
+### 1. Rif.php
 
 Clase que valida el rif indicado contra la información arrojada por el portal del seniat.
 
-### Ejemplo:
+### 2. Ejemplo.php:
 
  ``` php
 <?php
