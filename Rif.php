@@ -7,6 +7,10 @@
  * @since 06/12/2012
  * @version 1.0
  *
+ * Aportes realizado: WuilmerBolivar
+ * Formulario HTML para buscar RIF y ordernas los datos en un tabla
+ *
+ */
  */
 class Rif {
     /**

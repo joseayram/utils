@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>Consulta de RIF</title>
+</head>
+
+<style type="text/css"> 
+form.capa { 
+    background: none repeat scroll 0 0 #F1F1F1; 
+    border: 1px solid #DDDDDD; 
+    font-family: sans-serif; 
+    margin: 0 auto; 
+    padding: 20px; 
+    width: 278px; 
+    box-shadow:0px 0px 20px black; 
+    border-radius:10px; 
+} 
+form.capa div { 
+    margin-bottom: 15px; 
+    overflow: hidden; 
+} 
+form.capa div label { 
+    display: block; 
+    float: center; 
+    line-height: 25px; 
+} 
+form.capa div input[type="text"] { 
+    border: 1px solid #DCDCDC; 
+    float: center; 
+    padding: 4px; 
+} 
+form.capa div input[type="submit"] { 
+    background: none repeat scroll 0 0 #DEDEDE; 
+    border: 1px solid #C6C6C6; 
+    float: center; 
+    font-weight: bold; 
+    padding: 4px 20px; 
+} 
+.error{ 
+    color: red; 
+    font-weight: bold; 
+    margin: 12px; 
+    text-align: center; 
+} 
+</style> 
+
+
+
+
+<body>
+<center>
+<form action="ejemplo.php" method="post" class="capa">             
+<p><label><font size="3"><font color="blue"><b>.: DATOS RIF :. </b></font></font></label><br>
+	<input type="text" name="txtrif" id="txtrif" maxlength="10" /></p>
+
+<p><span><input type="submit" name="consulta" value="Consultar"></span></p>
+
+         </form>
+</center>
+
+
+</body>
+</html>
