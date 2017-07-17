@@ -77,8 +77,9 @@ class Rif {
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
                 $result = curl_exec ($ch);
+                $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-                if ($result) {
+                if ($http_status == 200) {
                     try {
                         if(substr($result,0,1)!= '<' ) {
                             throw new Exception($result);
@@ -105,7 +106,7 @@ class Rif {
                 } else {
                     // No hay conexión a internet
                     $this->_responseJson['code_result'] = 0;
-                    $this->_responseJson['message'] = 'Sin Conexión a Internet';
+                    $this->_responseJson['message'] = 'Recurso innaccesible';
                 }
             } else {
                 // No hay soporte CURL
@@ -154,6 +155,7 @@ class Rif {
                 case 'E':
                     $digitoEspecial = 2;
                     break;
+                case 'C':
                 case 'J':
                     $digitoEspecial = 3;
                     break;
