@@ -106,7 +106,7 @@ class Rif {
                 } else {
                     // No hay conexión a internet
                     $this->_responseJson['code_result'] = 0;
-                    $this->_responseJson['message'] = 'Recurso innaccesible';
+                    $this->_responseJson['message'] = 'Recurso inaccesible';
                 }
             } else {
                 // No hay soporte CURL
